@@ -1,5 +1,6 @@
 <?php
 
+use Facade\Ignition\SolutionProviders\InvalidRouteActionSolutionProvider;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,4 +44,34 @@ Route::get('arreglos', function () {
     print_r($indoceASO);
     echo "</pre>";
 //arreglo: estructura de datos
+});
+Route::get('paises', function () {
+    $paises= ["colombia"=>[
+"capital" => "bogota",
+"moneda" =>569874
+
+    ],
+    "peru"=>[
+        "capital" => "bogota",
+        "moneda" =>569874
+    ],
+    "paraguay"=>[
+        "capital" => "bogota",
+        "moneda" =>569874
+    ],];
+
+foreach($paises as $nombre=> $pais){
+  echo'<pre>';
+  echo "<h1>$nombre</h1>";
+    print_r($pais["capital"]);
+
+    print_r($pais["moneda"]);
+    echo"</pre>";
+    echo "<hr />";
+}
+
+
+
+
+
 });
